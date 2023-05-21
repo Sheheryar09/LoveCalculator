@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Love Calculator</title>
+  <style>
+    header {
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.mycard {
+    padding-left: 22rem;
+}
+  </style>
+  </head>
+
+  <body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPkbSlxiZcNMkR-lUOUTvWFRgneBHBhMC2TeOPoMY-LlxAS_J7aBglHBMr0_Dery32JA4&usqp=CAU" class="img-fluid" alt="..." style="background-size: cover; position: relative; height: 100%;width: 100%; background-position: center;">
+<header>
+    <div class="mycard w-75 text-center">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-danger text-white">LOVE CALCULATOR</li>
+          <li class="list-group-item text-center">
+            <br>
+            <input type="text" placeholder="YourName" id="name" class="text-center mx-3">
+            <span>+</span>
+            <input type="text" placeholder="LoveName" id="lname" class="text-center mx-3">
+ <br><br>
+ <button class="btn btn-success" style="width: 35%;" onclick="Calculate()">Click</button>
+<br><br>
+<input type="text"  id="percentage" placeholder="Love Percentage" style="width: 30%; text-align: center;">
+
+          </li>
+          <li class="list-group-item"> God Bless Your RelationShip</li>
+        </ul>
+      </div>
+
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+      
+function Calculate(){
+   var name= document.getElementById('name').value
+   var lname= document.getElementById('lname').value
+
+   if(name==""){
+    alert("Please Write Your Name")
+   }
+   else if(lname==""){
+    alert("Please Write Your Name")
+   }
+   else if(!isNaN(name)&&(lname)){
+    alert("Numbers are not allowed")
+   }
+   else{
+    var per=Math.floor( Math.random()*100)
+    var myper=document.getElementById('percentage')
+    myper.value=per+"%"
+    
+   }
+}
+
+    </script>
+  
+  </body>
+</html>
